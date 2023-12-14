@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>User List - <%= siteName %></title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>User List - <%= siteName %></h1>
+    <ul>
+        <% users.forEach(function(user) { %>
+            <li>
+                <%= user.first_name %> <%= user.last_name %> (Username: <%= user.username %>, Email: <%= user.email %>)
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

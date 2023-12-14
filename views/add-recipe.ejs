@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add Recipe to <%=siteName%></title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%=siteName%>: Add Recipe</h1>
+    <form method="POST" action="/recipe-added">
+        <p>Recipe name: <input id="name" type="text" name="name" value="" required /></p>
+        <p>Calories: <input id="calories" type="number" name="calories" value="" required /></p>
+        <input type="submit" value="Add Recipe" />
+    </form>
+  </body>
+</html>

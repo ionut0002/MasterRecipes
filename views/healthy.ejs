@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Welcome to <%= siteName %></title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%= siteName %> Recipes</h1>
+    <h2>Here are our healthy recipes:</h2>
+    <ul>
+      <% availableRecipes.forEach(function(recipe) { %>
+        <li><%= recipe.name %>, <%= recipe.calories %> calories</li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
