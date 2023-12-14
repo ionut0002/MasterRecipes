@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meal Search Results</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Search Results</h1>
+    <% if (meals) { %>
+        <% meals.forEach(function(meal) { %>
+            <div>
+                <h3><a href="/mealDetails/<%= meal.idMeal %>"><%= meal.strMeal %></a></h3>
+                <p><% 
+                    let summary = meal.strInstructions;
+                    let maxLength = 100; // Maximum number of characters
+                    let trimmedSummary = summary.length > maxLength ? summary.substring(0, summary.lastIndexOf(' ', maxLength)) + '...' : summary;
+                    %><%= trimmedSummary %></p>
+            </div>
+        <% }); %>
+    <% } else { %>
+        <p>No meals found for your search criteria.</p>
+    <% } %>
+</body>
+</html>
+

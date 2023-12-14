@@ -1,15 +1,15 @@
 <!doctype html>
 <html>
   <head>
-    <title>Welcome to <%= siteName %></title>
-    <link rel="stylesheet"  type="text/css" href="/main.css" />
+    <title>Healthy Recipes - <%= siteName %></title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
   </head>
   <body>
-    <h1><%= siteName %> Recipes</h1>
-    <h2>Here are our healthy recipes:</h2>
+    <h1>Healthy Recipes at <%= siteName %></h1>
+    <h2>Check out our selection of healthy recipes:</h2>
     <ul>
       <% availableRecipes.forEach(function(recipe) { %>
-        <li><%= recipe.name %>, <%= recipe.calories %> calories</li>
+        <li><%= recipe.name %>, Calories: <%= recipe.calories %></li>
       <% }) %>
     </ul>
   </body>

@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+    <title>Delete User - <%= siteName %></title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Delete User from <%= siteName %></h1>
+    <form method="POST" action="/userdeleted">
+        <p>Username: <input type="text" name="username" required></p>
+        <p><input type="submit" value="Delete User"></p>
+    </form>
+</body>
+</html>
